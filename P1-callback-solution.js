@@ -15,14 +15,16 @@ console.log("After");
 function getUser(id,callback){
     setTimeout(()=>{
         console.log("Reading ID from Database ....");
-        callback ({id:id,gitUser:"codewithz"});
+        const userReceivedFromDB={id:id,gitUser:"codewithz"};
+        callback (userReceivedFromDB);
     },2000);
 }
 
 function getRepos(gitUser,callback){
     setTimeout(()=>{
         console.log("Connecting to Github [",gitUser,"]....");
-        callback (["repo1","repo2","repo3"]);
+        const listOfRepos=["repo1","repo2","repo3"];
+        callback (listOfRepos);
     },3000)
 }
 
